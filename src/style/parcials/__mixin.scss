@@ -1,0 +1,37 @@
+@use "./_variables" as *;
+
+@font-face {
+  font-family: "Poppins-Regular-italic";
+  font-weight: 400;
+  src: url("../../fonts/Playfair_Display/PlayfairDisplay-Italic-VariableFont_wght.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "Poppins-Regular";
+  font-weight: 400;
+  src: url("../../fonts/Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf")
+    format("truetype");
+}
+
+@mixin bodyFont {
+  font-family: Poppins-Regular;
+}
+@mixin listDecoration {
+  list-style: none;
+  padding-left: 0%;
+  text-decoration: none;
+}
+
+@mixin padding-top-botton {
+  //  margin-top: 0%;
+  margin-bottom: 0%;
+}
+@mixin activeButton {
+  background-color: $activeBtn;
+  color: $activeTextBtn;
+
+  border: 1px $border solid;
+
+  border-radius: 5px;
+}

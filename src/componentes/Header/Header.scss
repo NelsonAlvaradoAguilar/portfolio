@@ -1,0 +1,37 @@
+@use "../../style/parcials/_mixin" as *;
+@use "../../style/parcials/_variables" as *;
+.header {
+  background-color: $backgroundColor;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  @include bodyFont();
+  @include listDecoration();
+  &__list {
+    &:hover {
+      background-color: #d9d9d9;
+    }
+    &--active {
+      border: 1px solid black;
+      @include activeButton();
+    }
+  }
+  &__link {
+    color: $colorText;
+    font-size: 0.8rem;
+    height: 1.2rem;
+    width: 100%;
+  }
+  &__engineer {
+    margin-bottom: 0%;
+    &--career {
+      margin-top: 0%;
+    }
+  }
+  &__navegation {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+}
