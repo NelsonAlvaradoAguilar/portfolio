@@ -3,9 +3,9 @@ import "./Header.scss";
 import { Link, NavLink } from "react-router-dom";
 import { navBartitles } from "../../apiData/data";
 function Header(params) {
-  const [indexx, setIndex] = useState(null);
+  const [selectedIndex, SetSelectedIndex] = useState(null);
   const select = (index) => {
-    setIndex(index);
+    SetSelectedIndex(index);
     console.log(index);
   };
   return (
@@ -18,25 +18,24 @@ function Header(params) {
         <ul className="header header__navegation">
           {navBartitles?.map((title, index) => {
             return (
-              <Link
+              <li
                 key={title.id}
                 onClick={() => {
                   select(index);
                 }}
-                className={`header header__link `}
+                className={`header header__list `}
                 to="/"
-                // target="_blank"
+                target="_blank"
               >
                 {" "}
-                <li
-                  className={`header header__list  ${
-                    index === indexx ? "header__list--active" : ""
+                <Link
+                  className={`header header__link ${
+                    index === selectedIndex ? "header__link--active" : ""
                   }`}
                 >
-                  {" "}
                   {title.title}
-                </li>{" "}
-              </Link>
+                </Link>
+              </li>
             );
           })}
         </ul>
