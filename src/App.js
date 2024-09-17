@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 
 import Header from "./componentes/Header/Header.js";
-
+import AboutMe from "./componentes/AboutMe/AboutMe.js";
 function App() {
   return (
     <>
@@ -12,7 +12,7 @@ function App() {
         <Routes>
           {/* Route for Main page */}
 
-          <Route path="/" />
+          <Route path="/" element={<AboutMe />} />
         </Routes>
       </BrowserRouter>
     </>

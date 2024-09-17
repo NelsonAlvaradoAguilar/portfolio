@@ -8,20 +8,25 @@
   text-align: center;
   @include bodyFont();
   @include listDecoration();
-  &__list {
+  &__link {
+    width: calc(0.8 * 100%);
+    color: $colorText;
+    font-size: 0.8rem;
+    height: 1.2rem;
     &:hover {
       background-color: #d9d9d9;
+      border-radius: 5px;
     }
     &--active {
       border: 1px solid black;
       @include activeButton();
     }
   }
-  &__link {
-    color: $colorText;
-    font-size: 0.8rem;
-    height: 1.2rem;
+  &__list {
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   &__engineer {
     margin-bottom: 0%;
@@ -32,6 +37,5 @@
   &__navegation {
     width: 100%;
     flex-direction: row;
-    justify-content: space-evenly;
   }
 }

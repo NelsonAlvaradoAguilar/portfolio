@@ -1,0 +1,21 @@
+.bio {
+  background-color: #d9d9d9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1rem;
+  &__subcontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__image {
+    width: 10.5rem;
+    height: 11.3rem;
+    border-radius: 25px;
+  }
+  &__article {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+}
