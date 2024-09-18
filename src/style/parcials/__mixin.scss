@@ -28,10 +28,40 @@
   margin-bottom: 0%;
 }
 @mixin activeButton {
+  background-color: #d9d9d9;
+  border: 1px solid black;
+  border: 1px $border solid;
+  border-radius: 5px;
+}
+
+@mixin SecActiveButton {
   background-color: $activeBtn;
   color: $activeTextBtn;
-
+  border: 1px solid black;
   border: 1px $border solid;
-
   border-radius: 5px;
+}
+@mixin hover {
+  background-color: $activeBtn;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+@mixin SechHover {
+  background-color: $ligthBackground;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+@mixin button {
+  border-radius: 5px;
+  border: 1px solid black;
+  background-color: $activeTextBtn;
+}
+
+@mixin card {
+  background-color: $ligthBackground;
+  padding: 1rem 2rem 1rem 2rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }

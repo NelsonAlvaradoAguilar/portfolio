@@ -1,9 +1,11 @@
+@use "../../style/parcials/_mixin" as *;
+@use "../../style/parcials/_variables" as *;
+
 .bio {
-  background-color: #d9d9d9;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 1rem;
+  @include card();
   &__subcontainer {
     display: flex;
     flex-direction: column;
@@ -15,7 +17,10 @@
     border-radius: 25px;
   }
   &__article {
-    margin-left: 2rem;
-    margin-right: 2rem;
+  }
+  &__paragraph {
+    &--botton {
+      margin-bottom: 0%;
+    }
   }
 }
