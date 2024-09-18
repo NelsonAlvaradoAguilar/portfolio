@@ -1,0 +1,16 @@
+@use "../../style/parcials/_mixin" as *;
+@use "../../style/parcials/_variables" as *;
+
+.education {
+  @include card();
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+  &__subtitle {
+    @include button();
+    &--active {
+      //@include hover();
+      @include SecActiveButton();
+    }
+  }
+}
