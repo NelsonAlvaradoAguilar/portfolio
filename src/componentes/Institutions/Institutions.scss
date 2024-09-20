@@ -1,0 +1,22 @@
+@use "../../style/parcials/_mixin" as *;
+@use "../../style/parcials/_variables" as *;
+
+.institutions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__hide {
+    visibility: hidden;
+    height: 0.01rem;
+  }
+  &__container {
+    @include listDecoration();
+  }
+  &__image {
+    width: calc(0.7 * 100vw);
+    border: 1px solid $border;
+    padding: 0.4rem;
+    height: 0%;
+    background-color: $basicBackgronudWhite;
+  }
+}

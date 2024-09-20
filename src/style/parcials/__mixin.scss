@@ -59,9 +59,10 @@
 
 @mixin card {
   background-color: $ligthBackground;
-  padding: 1rem 2rem 1rem 2rem;
+  padding: 1rem 1.5rem 1rem 1.5rem;
   margin-left: 1rem;
   margin-right: 1rem;
+  margin-top: 1rem;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
