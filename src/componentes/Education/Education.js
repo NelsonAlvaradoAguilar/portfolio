@@ -48,7 +48,33 @@ function Education() {
         })}
       </ul>
       {selected ? (
-        <Institution institution={selected} Open={open} />
+        <section
+          className={`institutions ${!open ? "institutions__hide" : ""}`}
+        >
+          <ul className="institutions__container">
+            <li className="institutions__list ">
+              {selected?.image ? (
+                <img
+                  className="institutions__image"
+                  alt={selected?.school}
+                  src={selected?.image}
+                />
+              ) : (
+                <p>No image available</p>
+              )}
+              <div>
+                <h3>
+                  {selected?.school}
+
+                  {selected?.type}
+                </h3>
+                <p>{selected?.city}</p>
+                <p>{selected?.career}</p>
+                <p>{selected?.date}</p>
+              </div>
+            </li>
+          </ul>
+        </section>
       ) : (
         <p>select again</p>
       )}
