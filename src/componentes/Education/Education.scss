@@ -5,11 +5,19 @@
   @include card();
   display: flex;
   flex-direction: column;
-  margin-top: 1rem;
+
+  &__subcontainer {
+    @include listDecoration();
+  }
+  &__link {
+    @include listDecoration();
+    color: $colorText;
+  }
   &__subtitle {
     @include button();
+
     &--active {
-      //@include hover();
+      // @include hover();
       @include SecActiveButton();
     }
   }
