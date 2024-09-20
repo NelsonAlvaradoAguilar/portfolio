@@ -6,11 +6,15 @@ function Institution({ institution, Open }) {
     <section className={`institutions ${!Open ? "institutions__hide" : ""}`}>
       <ul className="institutions__container">
         <li className="institutions__list ">
-          <img
-            className={`institutions__image`}
-            alt={institution?.image}
-            src={institution?.image}
-          ></img>
+          {institution?.image ? (
+            <img
+              className="institutions__image"
+              alt={institution?.school}
+              src={institution?.image}
+            />
+          ) : (
+            <p>No image available</p>
+          )}
           <div>
             <h3>
               {institution?.school}
