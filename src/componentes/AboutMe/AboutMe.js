@@ -3,8 +3,6 @@ import { aboutMeDada } from "../../apiData/data";
 import { Link, NavLink } from "react-router-dom";
 import "./AboutMe.scss";
 function AboutMe(params) {
-  const [selectedIndex, SetSelectedIndex] = useState(null);
-
   return (
     <section className="bio">
       {aboutMeDada?.map((data) => {
