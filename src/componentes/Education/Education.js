@@ -6,10 +6,11 @@ import Institution from "../Institutions/Institutions.js";
 function Education() {
   const [selected, SetSelected] = useState({});
   const [open, setOpen] = useState(false);
-  // const { id } = useParams();
+  const [id, setId] = useState();
+
   const data = educationData;
   console.log(data);
-  console.log();
+  console.log(id);
 
   /* const select = (title) => {
     SetSelected(() => (title.id === selected.id ? "" : subtitle));
@@ -22,6 +23,9 @@ function Education() {
     console.log(selectedEducation);
     SetSelected(selectedEducation);
     setOpen(true);
+    console.log(selectedEducation.id);
+    //setId(selectedEducation.id);
+    // console.log(educationData[index]);
   };
 
   return (
@@ -29,17 +33,18 @@ function Education() {
       <h1 className="education__title">Education Process</h1>
 
       <ul className="education__subcontainer">
-        {educationDataList?.map((titles) => {
-          console.log(titles);
-
+        {educationDataList?.map((titles, id) => {
+          console.log(titles, id);
+          // setIndex(index);
           return (
             <li
               key={titles.id}
               onClick={() => {
                 handleSelect(titles.id);
+                setId(titles.id);
               }}
               className={`education__subtitle ${
-                selected.id === titles.id ? "education__subtitle--active" : ""
+                selected?.id === titles.id ? "education__subtitle--active" : ""
               }`}
             >
               <Link className="education__link"> {titles.title} </Link>
@@ -48,33 +53,7 @@ function Education() {
         })}
       </ul>
       {selected ? (
-        <section
-          className={`institutions ${!open ? "institutions__hide" : ""}`}
-        >
-          <ul className="institutions__container">
-            <li className="institutions__list ">
-              {selected?.image ? (
-                <img
-                  className="institutions__image"
-                  alt={selected?.school}
-                  src={selected?.image}
-                />
-              ) : (
-                <p>No image available</p>
-              )}
-              <div>
-                <h3>
-                  {selected?.school}
-
-                  {selected?.type}
-                </h3>
-                <p>{selected?.city}</p>
-                <p>{selected?.career}</p>
-                <p>{selected?.date}</p>
-              </div>
-            </li>
-          </ul>
-        </section>
+        <Institution institution={selected} Open={open} id={id} />
       ) : (
         <p>select again</p>
       )}
