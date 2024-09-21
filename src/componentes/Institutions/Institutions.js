@@ -38,7 +38,7 @@ function Institution({ institution, Open, id }) {
           </div>
         </li>
       </ul>
-      <img width={200} src={diploma}></img>
+      {id === "0" ? <img width={200} src={diploma}></img> : ""}
     </section>
   );
 }
