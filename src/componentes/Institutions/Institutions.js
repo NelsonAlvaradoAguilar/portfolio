@@ -1,20 +1,29 @@
 import { Link } from "react-router-dom";
 import "./Institutions.scss";
+import diploma from "../../assets/ imageDiploma.png";
+import certification from "../../assets/certification.png";
 import { useEffect, useState } from "react";
-function Institution({ institution, Open }) {
+import Image from "../Image/Image";
+function Institution({ institution, Open, id }) {
+  console.log(id);
+
   return (
     <section className={`institutions ${!Open ? "institutions__hide" : ""}`}>
       <ul className="institutions__container">
         <li className="institutions__list ">
-          {institution?.image ? (
+          {id === "0" ? (
             <img
               className="institutions__image"
               alt={institution?.school}
-              src={institution?.image}
+              src={diploma}
             />
-          ) : (
-            <p>No image available</p>
-          )}
+          ) : id === "1" ? (
+            <img
+              className="institutions__image"
+              alt={institution?.school}
+              src={certification}
+            />
+          ) : null}
           <div>
             <h3>
               {institution?.school}
