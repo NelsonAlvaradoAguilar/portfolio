@@ -17,7 +17,10 @@ function Institution({ institution, Open, id }) {
               alt={institution?.school}
               src={diploma}
             />
-          ) : id === "1" ? (
+          ) : (
+            ""
+          )}
+          {id === "1" ? (
             <img
               className="institutions__image"
               alt={institution?.school}
@@ -38,7 +41,7 @@ function Institution({ institution, Open, id }) {
           </div>
         </li>
       </ul>
-      {id === "0" ? <img width={200} src={diploma}></img> : ""}
+      {id === "1" ? <img width={200} src={diploma}></img> : ""}
     </section>
   );
 }
