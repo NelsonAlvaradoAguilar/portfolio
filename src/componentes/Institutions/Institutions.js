@@ -23,7 +23,9 @@ function Institution({ institution, Open, id }) {
               alt={institution?.school}
               src={certification}
             />
-          ) : null}
+          ) : (
+            ""
+          )}
           <div>
             <h3>
               {institution?.school}
@@ -36,6 +38,7 @@ function Institution({ institution, Open, id }) {
           </div>
         </li>
       </ul>
+      <img width={200} src={diploma}></img>
     </section>
   );
 }
