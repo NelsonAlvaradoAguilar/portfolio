@@ -2,6 +2,7 @@ import image1 from "../assets/Online-Part-Time_September-2023_Placement_0009_Nel
 import image2 from "../assets/Screenshot 2024-06-14 at 11.20.42 AM.png";
 import diploma from "../assets/ imageDiploma.png";
 import certification from "../assets/certification.png";
+import colombiaCertificate from "../assets/colombian certificate.png";
 import hackatonImg from "../assets/Nelson Alvarado-Aguilar-hack.png";
 const navBartitles = [
   { id: "0", title: "About Me" },
@@ -74,9 +75,9 @@ const educationData = [
     title: "National training Academy",
     school: "National training Academy",
     type: " | Certification",
-    career: "Technician in Business Administration",
+    career: "SYSTEMIZED FINANCIAL MANAGEMENT.",
     city: "COLOMBIA",
-    image: "Waiting for legal translation",
+    image: colombiaCertificate,
     date: "Jan 2011 - Dec 2012",
   },
 ];
