@@ -33,7 +33,7 @@ function Institution({ institution, Open, id }) {
           className="institutions__image"
           alt={institution?.school}
           src={colombianCertificate}
-        />
+        ></img>
       ) : (
         ""
       )}
@@ -51,6 +51,7 @@ function Institution({ institution, Open, id }) {
           </div>
         </li>
       </ul>
+      {id === "1" ? <img width={200} src={diploma}></img> : ""}
     </section>
   );
 }
