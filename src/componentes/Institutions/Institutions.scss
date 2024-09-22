@@ -13,7 +13,14 @@
     width: 100%;
     border: 1px solid $border;
     padding: 0.4rem;
-    // height: 0%;
     background-color: $basicBackgronudWhite;
+  }
+  &__close {
+    margin-left: auto;
+    @include buttonStyle();
+  }
+  &__icon {
+    padding: 0.01rem;
+    width: 2rem;
   }
 }
