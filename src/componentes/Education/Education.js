@@ -1,13 +1,13 @@
 import { useState } from "react";
 import "./Education.scss";
 import { educationData, educationDataList } from "../../apiData/data.js";
-import { Link, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import Institution from "../Institutions/Institutions.js";
 function Education() {
-  const [selected, SetSelected] = useState({});
+  const [selected, SetSelected] = useState();
   const [open, setOpen] = useState(false);
   const [id, setId] = useState();
-
+  const navegate = useNavigate();
   const data = educationData;
   console.log(data);
   console.log(id);
@@ -53,9 +53,14 @@ function Education() {
         })}
       </ul>
       {selected ? (
-        <Institution institution={selected} Open={open} id={id} />
+        <Institution
+          institution={selected}
+          Open={open}
+          id={id}
+          SetSelected={SetSelected}
+        />
       ) : (
-        <p>select again</p>
+        ""
       )}
     </section>
   );
