@@ -5,20 +5,34 @@
   @include card();
   display: flex;
   flex-direction: column;
+  align-items: center;
 
   &__subcontainer {
     @include listDecoration();
+    width: 100%;
+    &--subtitles {
+      display: flex;
+      flex-flow: row wrap;
+      width: 20rem;
+      justify-content: space-evenly;
+    }
+  }
+  &__subtitle {
+    @include Titles();
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 0.5rem;
+    &--active {
+      @include SecActiveButton();
+    }
+  }
+  &__activated {
+    width: 18rem;
   }
   &__link {
     @include listDecoration();
     color: $colorText;
-  }
-  &__subtitle {
-    @include button();
-
-    &--active {
-      // @include hover();
-      @include SecActiveButton();
-    }
   }
 }
