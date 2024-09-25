@@ -16,11 +16,13 @@ function Institution({ institution, Open, index, SetSelected }) {
       <ul className="institutions__container">
         <li className="institutions__list ">
           {institution?.image ? (
-            <img
-              className="institutions__image"
-              alt={institution?.school}
-              src={institution?.image}
-            />
+            <div className="institutions__image-container">
+              <img
+                className="institutions__image-container--image"
+                alt={institution?.school}
+                src={institution?.image}
+              />
+            </div>
           ) : (
             ""
           )}
@@ -36,27 +38,19 @@ function Institution({ institution, Open, index, SetSelected }) {
           </div>
         </li>
       </ul>
-      <div className="institutions__close">
-        {"Close"}
-        <img
-          className="institutions__icon"
+      <div className="institutions__btn-container">
+        <div
           onClick={() => {
             close();
           }}
-          src={closeImg}
-        ></img>
+          className="institutions__close"
+        >
+          <p> {"Close"}</p>
+          <img className="institutions__icon" src={closeImg}></img>
+        </div>
+        <p className="institutions__Achivements">{"Achivements"}</p>
       </div>
     </section>
   );
 }
 export default Institution;
-/**  const navegate = useNavigate();
-
-  function close(params) {
-    navegate("/");
-  }
-   onClick={() => {
-        close();
-        console.log("eee");
-      }}
-      className="close" */

@@ -7,6 +7,8 @@ function Education() {
   const [selected, SetSelected] = useState();
   const [open, setOpen] = useState(false);
   const [id, setId] = useState();
+  const [achivement, setAchivement] = useState(false);
+
   const navegate = useNavigate();
   const data = educationData;
   console.log(data);
@@ -24,18 +26,24 @@ function Education() {
     SetSelected(selectedEducation);
     setOpen(true);
     console.log(selectedEducation.id);
-    //setId(selectedEducation.id);
-    // console.log(educationData[index]);
   };
-
+  const activeAchivements = () => {
+    setAchivement(true);
+    setOpen(false);
+  };
   return (
     <section className="education">
       <h1 className="education__title">Education Process</h1>
 
-      <ul className="education__subcontainer">
-        {educationDataList?.map((titles, id) => {
+      <ul
+        className={`education__subcontainer ${
+          selected
+            ? "education__activeted education__subcontainer--subtitles"
+            : ""
+        }`}
+      >
+        {educationDataList?.map((titles, id, index) => {
           console.log(titles, id);
-          // setIndex(index);
           return (
             <li
               key={titles.id}
@@ -44,7 +52,7 @@ function Education() {
                 setId(titles.id);
               }}
               className={`education__subtitle ${
-                selected?.id === titles.id ? "education__subtitle--active" : ""
+                selected?.id === titles.id ? " education__subtitle--active" : ""
               }`}
             >
               <Link className="education__link"> {titles.title} </Link>
@@ -62,6 +70,8 @@ function Education() {
       ) : (
         ""
       )}
+
+      {achivement ? <Institution /> : ""}
     </section>
   );
 }

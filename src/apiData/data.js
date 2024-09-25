@@ -75,7 +75,7 @@ const educationData = [
     title: "National training Academy",
     school: "National training Academy",
     type: " | Certification",
-    career: "SYSTEMIZED FINANCIAL MANAGEMENT.",
+    career: "Financial Management.",
     city: "COLOMBIA",
     image: colombiaCertificate,
     date: "Jan 2011 - Dec 2012",

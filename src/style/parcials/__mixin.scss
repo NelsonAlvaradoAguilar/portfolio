@@ -35,10 +35,10 @@
 }
 
 @mixin SecActiveButton {
-  background-color: $activeBtn;
+  // background-color: $activeBtn;
   color: $activeTextBtn;
-  border: 1px solid black;
-  border: 1px $border solid;
+  border: 2px solid $buttonBorder;
+
   border-radius: 5px;
 }
 @mixin hover {
@@ -51,10 +51,12 @@
   border-radius: 5px;
   border: 1px solid black;
 }
-@mixin button {
+@mixin Titles {
+  height: 36px;
   border-radius: 5px;
   border: 1px solid black;
   background-color: $activeTextBtn;
+  padding: 0.1rem 0.4rem 0.1rem 0.4rem;
 }
 
 @mixin card {
@@ -67,12 +69,13 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 @mixin buttonStyle {
-  position: relative;
-  bottom: 8rem;
-  border: 1px solid black;
+  border: 2px solid $buttonBorder;
   background-color: $basicBackgronudWhite;
-  width: 80px;
+  width: 90px;
+  height: 36px;
   display: flex;
+  align-items: center;
   justify-content: center;
-  border-radius: 5px;
+  border-radius: 8px;
+  cursor: grab;
 }
