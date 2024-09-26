@@ -1,13 +1,18 @@
 import { useState } from "react";
 import "./Education.scss";
-import { educationData, educationDataList } from "../../apiData/data.js";
+import {
+  educationData,
+  educationDataList,
+  achievementsData,
+} from "../../apiData/data.js";
+
 import { Link, useNavigate, useParams } from "react-router-dom";
 import Institution from "../Institutions/Institutions.js";
 function Education() {
   const [selected, SetSelected] = useState();
   const [open, setOpen] = useState(false);
   const [id, setId] = useState();
-  const [achivement, setAchivement] = useState(false);
+  const [achivement, setAchivement] = useState();
 
   const navegate = useNavigate();
   const data = educationData;
@@ -22,15 +27,15 @@ function Education() {
     const selectedEducation = educationData.find(
       (institution) => institution.id === selectedId
     );
+
     console.log(selectedEducation);
     SetSelected(selectedEducation);
+    setAchivement(achievementsData);
     setOpen(true);
     console.log(selectedEducation.id);
+    console.log(achivement);
   };
-  const activeAchivements = () => {
-    setAchivement(true);
-    setOpen(false);
-  };
+
   return (
     <section className="education">
       <h1 className="education__title">Education Process</h1>
@@ -71,7 +76,15 @@ function Education() {
         ""
       )}
 
-      {achivement ? <Institution /> : ""}
+      {achivement?.map((mention) => {
+        return (
+          <Institution
+            key={mention.id} // Ensure 'id' exists in 'mention'
+            institution={mention}
+            SetSelected={setAchivement(null)}
+          />
+        );
+      })}
     </section>
   );
 }
