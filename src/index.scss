@@ -1,7 +1,10 @@
+@use "../src/style/parcials/_mixin" as *;
+
 body {
   margin-left: 0.5rem;
   margin-right: 0.5rem;
   background-color: #e8e7e7;
+  // @include bodyFont();
 }
 
 code {

@@ -3,14 +3,19 @@ import "./Institutions.scss";
 import closeImg from "../../assets/icons/icons8-close.svg";
 import Close from "../CloseButton/CloseButton";
 import diploma from "../../assets/ imageDiploma.png";
-import { useEffect, useState } from "react";
-function Institution({ institution, Open, index, SetSelected }) {
+import { achievementsData } from "../../apiData/data";
+import { useState } from "react";
+function Institution({ institution, Open, SetSelected }) {
   const navegate = useNavigate();
+  const [achivement, setAchivement] = useState();
+  //  setAchivement(achievementsData);
+  console.log(achivement);
 
   function close(params) {
     navegate("/");
     SetSelected(null);
   }
+
   return (
     <section className={`institutions ${!Open ? "institutions__hide" : ""}`}>
       <ul className="institutions__container">
@@ -48,7 +53,6 @@ function Institution({ institution, Open, index, SetSelected }) {
           <p> {"Close"}</p>
           <img className="institutions__icon" src={closeImg}></img>
         </div>
-        <p className="institutions__Achivements">{"Achivements"}</p>
       </div>
     </section>
   );
