@@ -122,7 +122,7 @@ const workExperience = [
     ],
   },
   {
-    id: "3",
+    id: "2",
     position: "Mixologist",
     company: "Alquimico",
     location: "Cartagena, COL",
