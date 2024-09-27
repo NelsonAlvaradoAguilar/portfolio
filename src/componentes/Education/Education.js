@@ -65,26 +65,14 @@ function Education() {
           );
         })}
       </ul>
-      {selected ? (
+      {selected && (
         <Institution
           institution={selected}
-          Open={open}
+          open={open}
           id={id}
           SetSelected={SetSelected}
         />
-      ) : (
-        ""
       )}
-
-      {achivement?.map((mention) => {
-        return (
-          <Institution
-            key={mention.id} // Ensure 'id' exists in 'mention'
-            institution={mention}
-            SetSelected={setAchivement(null)}
-          />
-        );
-      })}
     </section>
   );
 }
