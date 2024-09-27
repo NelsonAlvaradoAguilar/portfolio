@@ -1,45 +1,56 @@
 import { useEffect, useState } from "react";
 import { workExperience, workExperienceTitles } from "../../apiData/data";
-
+import JobDetails from "../JobDetails/JobDetails";
+import { useNavigate } from "react-router-dom";
 function WorkExperience() {
-  const [experience, setExperience] = useState([]);
-  const [showDetails, setShowDetails] = useState(false);
-  // Load the work experience data on component mount
+  const [showDetails, setShowDetails] = useState([] || true);
+  const [titles, setTitles] = useState([]);
+  const [id, setId] = useState();
+  const [open, setOpen] = useState(false);
+  const navegate = useNavigate();
   useEffect(() => {
-    setExperience(workExperience);
+    setTitles(workExperienceTitles);
   }, []);
-  const open = () => {
-    setShowDetails(!showDetails);
+  console.log(titles);
+  const handleSelect = (selectedId) => {
+    const selectedDetails = workExperience.find(
+      (position) => position.id === selectedId
+    );
+    console.log(selectedDetails);
+    setShowDetails(selectedDetails);
+    console.log(showDetails);
+    setId(selectedDetails.id);
   };
+  function close(params) {
+    setShowDetails(false);
+  }
   return (
     <>
       <h1>Experience</h1>
       <ul>
-        {experience.map((job, index) => (
-          <li key={index}>
-            <h3>
-              {job.position} | {job.company}
-            </h3>
-            <p>Location: {job.location}</p>
-
-            {showDetails && (
-              <div>
-                <ul>
-                  {job.responsibilities.map((responsibility, idx) => (
-                    <li key={idx}>{responsibility}</li>
-                  ))}
-                </ul>
-                <p>
-                  Dates: {job.startDate} - {job.endDate}
-                </p>
-              </div>
+        {titles?.map((subtitles, id) => (
+          <li
+            onClick={() => {
+              handleSelect(subtitles.id);
+            }}
+            key={subtitles.id}
+          >
+            <h3>{subtitles.title}</h3>
+            {subtitles.id === showDetails.id ? (
+              <JobDetails job={showDetails} setShowDetails={setShowDetails} />
+            ) : (
+              ""
             )}
-            <button onClick={open}>
-              {showDetails ? "Hide Details" : "Show Details"}
-            </button>
           </li>
         ))}
       </ul>
+      <button
+        onClick={() => {
+          close();
+        }}
+      >
+        {"Close"}
+      </button>
     </>
   );
 }

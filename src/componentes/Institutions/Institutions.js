@@ -7,9 +7,6 @@ import { achievementsData } from "../../apiData/data";
 import { useState } from "react";
 function Institution({ institution, Open, SetSelected }) {
   const navegate = useNavigate();
-  const [achivement, setAchivement] = useState();
-  //  setAchivement(achievementsData);
-  console.log(achivement);
 
   function close(params) {
     navegate("/");
@@ -20,7 +17,7 @@ function Institution({ institution, Open, SetSelected }) {
     <section className={`institutions ${!Open ? "institutions__hide" : ""}`}>
       <ul className="institutions__container">
         <li className="institutions__list ">
-          {institution?.image ? (
+          {institution.image ? (
             <div className="institutions__image-container">
               <img
                 className="institutions__image-container--image"
