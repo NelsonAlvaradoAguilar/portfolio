@@ -25,6 +25,7 @@
 
     margin-bottom: 0.5rem;
     &--active {
+      color: $colorText;
       @include SecActiveButton();
     }
   }
@@ -33,6 +34,5 @@
   }
   &__link {
     @include listDecoration();
-    color: $colorText;
   }
 }
