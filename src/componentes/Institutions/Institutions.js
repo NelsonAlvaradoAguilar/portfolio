@@ -18,11 +18,13 @@ function Institution({ institution, Open, SetSelected }) {
       <ul className="institutions__container">
         <li className="institutions__list ">
           {institution.image ? (
-            <img
-              className="institutions__image-container--image"
-              alt={institution?.school}
-              src={institution?.image}
-            />
+            <div className="institutions__image-container">
+              <img
+                className="institutions__image-container--image"
+                alt={institution?.school}
+                src={institution?.image}
+              />
+            </div>
           ) : (
             ""
           )}
