@@ -5,12 +5,12 @@ import Close from "../CloseButton/CloseButton";
 import diploma from "../../assets/ imageDiploma.png";
 import { achievementsData } from "../../apiData/data";
 import { useState } from "react";
-function Institution({ institution, Open, SetSelected }) {
+function Institution({ institution, Open, SetSelected, setDetails }) {
   const navegate = useNavigate();
 
   function close(params) {
     navegate("/");
-    // SetSelected(null);
+    setDetails(false);
   }
 
   return (
