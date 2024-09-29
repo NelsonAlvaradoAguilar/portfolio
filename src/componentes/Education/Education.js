@@ -8,15 +8,17 @@ function Education() {
   const [selected, SetSelected] = useState(null);
   const [details, setDetails] = useState([] || true);
   const [titles, setTitles] = useState([]);
+  const [data, setData] = useState([]);
   const [id, setId] = useState(null);
 
   const navegate = useNavigate();
   useEffect(() => {
     setTitles(educationDataList);
+    setData(educationData);
   }, []);
 
   const handleSelect = (selectedId) => {
-    const selectedEducation = educationData.find(
+    const selectedEducation = data.find(
       (institution) => institution.id === selectedId
     );
 
