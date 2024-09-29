@@ -17,17 +17,14 @@ function Institution({ institution, Open, SetSelected, setDetails }) {
     <section className={`institutions ${!Open ? "institutions__hide" : ""}`}>
       <ul className="institutions__container">
         <li className="institutions__list ">
-          {institution.image ? (
-            <div className="institutions__image-container">
-              <img
-                className="institutions__image-container--image"
-                alt={institution?.school}
-                src={institution?.image}
-              />
-            </div>
-          ) : (
-            ""
-          )}
+          <div className="institutions__image-container">
+            <img
+              className="institutions__image-container--image"
+              alt={institution?.school}
+              src={institution?.image}
+            />
+          </div>
+
           <div>
             <h3>
               {institution?.school}
