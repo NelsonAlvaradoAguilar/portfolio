@@ -5,8 +5,8 @@ import { educationData, educationDataList } from "../../apiData/data.js";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import Institution from "../Institutions/Institutions.js";
 function Education() {
-  const [selected, SetSelected] = useState(null);
-  const [details, setDetails] = useState([] || true);
+  // const [selected, SetSelected] = useState(null);
+  const [details, setDetails] = useState(null || false);
   const [titles, setTitles] = useState([]);
   const [data, setData] = useState([]);
   const [id, setId] = useState(null);
@@ -23,8 +23,8 @@ function Education() {
     );
 
     console.log(selectedEducation);
-    setDetails(selectedEducation);
-    SetSelected(selectedEducation);
+    setDetails(selectedEducation || true);
+
     // setId(selectedEducation.id);
     console.log(details.id);
 
@@ -52,21 +52,23 @@ function Education() {
                 setId(titles.id);
               }}
               className={`education__subtitle ${
-                selected?.id === titles.id ? " education__subtitle--active" : ""
+                details?.id === titles.id ? " education__subtitle--active" : ""
               }`}
             >
-              {titles.title}
+              <h4>{titles.title}</h4>
             </li>
           );
         })}
       </ul>
-      {selected && (
+      {details ? (
         <Institution
-          institution={selected}
+          institution={details}
           open={details}
           id={id}
-          SetSelected={SetSelected}
+          setDetails={setDetails}
         />
+      ) : (
+        ""
       )}
     </section>
   );
