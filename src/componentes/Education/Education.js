@@ -1,13 +1,13 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./Education.scss";
 import { educationData, educationDataList } from "../../apiData/data.js";
 
 import { Link, useNavigate, useParams } from "react-router-dom";
 import Institution from "../Institutions/Institutions.js";
 function Education() {
-  const [selected, SetSelected] = useState();
+  const [selected, SetSelected] = useState(null);
   const [open, setOpen] = useState(false);
-  const [id, setId] = useState();
+  const [id, setId] = useState(null);
   //  const [achivement, setAchivement] = useState();
 
   const navegate = useNavigate();
@@ -15,20 +15,18 @@ function Education() {
 
   console.log(id);
 
-  /* const select = (title) => {
-    SetSelected(() => (title.id === selected.id ? "" : subtitle));
-    console.log();
-  };
-  */ const handleSelect = (selectedId) => {
+  const handleSelect = (selectedId) => {
+    if (!selectedId) return;
     const selectedEducation = educationData.find(
       (institution) => institution.id === selectedId
     );
-
-    console.log(selectedEducation);
     if (selectedEducation) {
       SetSelected(selectedEducation);
+      setOpen(true);
+      setId(selectedEducation.id);
     }
-    setOpen(true);
+    console.log(selectedEducation);
+
     console.log(selectedEducation.id);
   };
 
@@ -49,14 +47,14 @@ function Education() {
             <li
               key={titles.id}
               onClick={() => {
-                handleSelect(titles.id);
+                handleSelect(titles?.id);
                 setId(titles.id);
               }}
               className={`education__subtitle ${
                 selected?.id === titles.id ? " education__subtitle--active" : ""
               }`}
             >
-              <Link className="education__link"> {titles.title} </Link>
+              {titles.title}
             </li>
           );
         })}
