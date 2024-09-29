@@ -10,7 +10,7 @@ function Institution({ institution, Open, SetSelected }) {
 
   function close(params) {
     navegate("/");
-    SetSelected(null);
+    // SetSelected(null);
   }
 
   return (
