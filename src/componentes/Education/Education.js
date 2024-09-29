@@ -1,10 +1,6 @@
 import { useState } from "react";
 import "./Education.scss";
-import {
-  educationData,
-  educationDataList,
-  achievementsData,
-} from "../../apiData/data.js";
+import { educationData, educationDataList } from "../../apiData/data.js";
 
 import { Link, useNavigate, useParams } from "react-router-dom";
 import Institution from "../Institutions/Institutions.js";
@@ -12,11 +8,11 @@ function Education() {
   const [selected, SetSelected] = useState();
   const [open, setOpen] = useState(false);
   const [id, setId] = useState();
-  const [achivement, setAchivement] = useState();
+  //  const [achivement, setAchivement] = useState();
 
   const navegate = useNavigate();
-  const data = educationData;
-  console.log(data);
+  // const data = educationData;
+
   console.log(id);
 
   /* const select = (title) => {
@@ -29,11 +25,11 @@ function Education() {
     );
 
     console.log(selectedEducation);
-    SetSelected(selectedEducation);
-    setAchivement(achievementsData);
+    if (selectedEducation) {
+      SetSelected(selectedEducation);
+    }
     setOpen(true);
     console.log(selectedEducation.id);
-    console.log(achivement);
   };
 
   return (
