@@ -11,7 +11,7 @@ function WorkExperience() {
   useEffect(() => {
     setTitles(workExperienceTitles);
   }, []);
-  console.log(titles);
+
   const handleSelect = (selectedId) => {
     const selectedDetails = workExperience.find(
       (position) => position.id === selectedId

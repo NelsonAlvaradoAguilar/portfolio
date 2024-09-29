@@ -6,28 +6,27 @@ import { Link, useNavigate, useParams } from "react-router-dom";
 import Institution from "../Institutions/Institutions.js";
 function Education() {
   const [selected, SetSelected] = useState(null);
-  const [open, setOpen] = useState(false);
+  const [details, setDetails] = useState([] || true);
+  const [titles, setTitles] = useState([]);
   const [id, setId] = useState(null);
-  //  const [achivement, setAchivement] = useState();
 
   const navegate = useNavigate();
-  // const data = educationData;
-
-  console.log(id);
+  useEffect(() => {
+    setTitles(educationDataList);
+  }, []);
 
   const handleSelect = (selectedId) => {
-    if (!selectedId) return;
     const selectedEducation = educationData.find(
       (institution) => institution.id === selectedId
     );
-    if (selectedEducation) {
-      SetSelected(selectedEducation);
-      setOpen(true);
-      setId(selectedEducation.id);
-    }
-    console.log(selectedEducation);
 
-    console.log(selectedEducation.id);
+    console.log(selectedEducation);
+    setDetails(selectedEducation);
+    SetSelected(selectedEducation);
+    // setId(selectedEducation.id);
+    console.log(details.id);
+
+    return selectedEducation;
   };
 
   return (
@@ -36,12 +35,12 @@ function Education() {
 
       <ul
         className={`education__subcontainer ${
-          selected
+          details
             ? "education__activeted education__subcontainer--subtitles"
             : ""
         }`}
       >
-        {educationDataList?.map((titles, id, index) => {
+        {titles?.map((titles, id, index) => {
           console.log(titles, id);
           return (
             <li
@@ -62,7 +61,7 @@ function Education() {
       {selected && (
         <Institution
           institution={selected}
-          open={open}
+          open={details}
           id={id}
           SetSelected={SetSelected}
         />
