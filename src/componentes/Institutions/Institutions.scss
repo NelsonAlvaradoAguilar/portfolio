@@ -8,19 +8,17 @@
   width: 100%;
 
   &__container {
-    @include listDecoration();
-  }
-  &__image-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: $basicBackgronudWhite;
-    padding: 0.3rem 0.3rem 0.3rem 0.3rem;
+    @include listDecoration();
+  }
+  &__image {
+    //  background-color: $basicBackgronudWhite;
+    padding: 0.8rem;
     border: 1px solid $border;
-    &--image {
-      width: 100%;
-      border: 1px solid $border;
-    }
+    width: calc(0.9 * 100%);
+    border-radius: 4px;
   }
 
   &__btn-container {
