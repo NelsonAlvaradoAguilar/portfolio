@@ -12,6 +12,9 @@
     align-items: center;
   }
   &__image {
+    background-color: $basicBackgronudWhite;
+
+    border: 1px solid $border;
     width: 10.5rem;
     height: 11.3rem;
     border-radius: 25px;

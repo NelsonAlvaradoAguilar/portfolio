@@ -8,6 +8,7 @@ function WorkExperience() {
   const [id, setId] = useState();
   const [open, setOpen] = useState(false);
   const navegate = useNavigate();
+
   useEffect(() => {
     setTitles(workExperienceTitles);
   }, []);

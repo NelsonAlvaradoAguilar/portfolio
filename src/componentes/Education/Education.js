@@ -12,6 +12,7 @@ function Education() {
   const [id, setId] = useState(null);
 
   const navegate = useNavigate();
+
   useEffect(() => {
     setTitles(educationDataList);
     setData(educationData);
@@ -22,13 +23,12 @@ function Education() {
       (institution) => institution.id === selectedId
     );
 
-    console.log(selectedEducation);
-    setDetails(selectedEducation || true);
+    setDetails(selectedEducation);
 
-    // setId(selectedEducation.id);
+    setId(selectedEducation.id);
     console.log(details.id);
-
-    return selectedEducation;
+    console.log(selectedEducation);
+    return details;
   };
 
   return (
@@ -42,24 +42,22 @@ function Education() {
             : ""
         }`}
       >
-        {titles?.map((titles, id, index) => {
-          console.log(titles, id);
-          return (
-            <li
-              key={titles.id}
-              onClick={() => {
-                handleSelect(titles?.id);
-                setId(titles.id);
-              }}
-              className={`education__subtitle ${
-                details?.id === titles.id ? " education__subtitle--active" : ""
-              }`}
-            >
-              <h4>{titles.title}</h4>
-            </li>
-          );
-        })}
+        {titles?.map((title, index) => (
+          <li
+            key={title.id}
+            onClick={() => {
+              handleSelect(title.id);
+              setId(title.id);
+            }}
+            className={`education__subtitle ${
+              details?.id === title.id ? " education__subtitle--active" : ""
+            }`}
+          >
+            <h4>{title.title}</h4>
+          </li>
+        ))}
       </ul>
+
       {details ? (
         <Institution
           institution={details}
@@ -75,3 +73,13 @@ function Education() {
 }
 
 export default Education;
+/** {details?.id === title.id ? (
+              <Institution
+                institution={details}
+                open={details}
+                id={id}
+                setDetails={setDetails}
+              />
+            ) : (
+              ""
+            )} */
