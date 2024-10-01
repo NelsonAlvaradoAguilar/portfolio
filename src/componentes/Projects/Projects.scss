@@ -1,20 +1,24 @@
 @use "../../style/parcials/_mixin" as *;
 @use "../../style/parcials/_variables" as *;
 .project {
-  border: 1px solid $backgroundColor2;
-  border-radius: 8px;
-  background-color: #f9f9f9;
+  // border: 1px solid $backgroundColor2;
+  //border-radius: 8px;
+  // background-color: #f9f9f9;
   display: flex;
   flex-direction: column;
-  width: 100%;
+  //background-image: url(../../assets/background/christian-stahl-xmGkzY--Fgg-unsplash.jpg);
   align-items: center;
   justify-content: center;
-  @include listDecoration();
+
+  @include card();
+
   &__title {
     font-size: 24px;
     font-weight: bold;
   }
-
+  &__ul {
+    @include listDecoration();
+  }
   &__description {
     font-size: 16px;
     margin: 10px 10px 10px 10px;
@@ -23,18 +27,18 @@
   &__images {
     display: flex;
     flex-direction: column;
-    //  width: calc(0.85 * 100%);
+
     align-items: center;
     justify-content: center;
   }
 
   &__image {
-    width: 100%; /* Adjust size as necessary */
-    height: auto;
+    width: calc(0.8 * 100vw); /* Adjust size as necessary */
+    height: 100%;
     margin-top: 1rem;
     border-radius: 5px;
     border: 1px solid $border;
-    padding: 0.2rem;
+    padding: 0.4rem;
     &:hover {
       opacity: 0.7;
     }

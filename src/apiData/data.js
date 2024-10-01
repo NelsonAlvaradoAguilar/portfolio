@@ -8,7 +8,7 @@ import capstoneimage1 from "../assets/projects/capstone/Screenshot 2024-09-09 at
 import capstoneimage2 from "../assets/projects/capstone/Screenshot 2024-09-30 at 9.21.03 PM.png";
 import capstoneimage3 from "../assets/projects/capstone/Screenshot 2024-09-30 at 9.21.08 PM.png";
 import capstoneimage4 from "../assets/projects/capstone/Screenshot 2024-09-30 at 9.21.11 PM.png";
-import capstoneimage5 from "../assets/projects/capstone/Screenshot 2024-09-09 at 9.43.05 PM (2).png";
+import capstoneimage5 from "../assets/projects/capstone/Screenshot 2024-09-30 at 9.21.15 PM.png";
 import capstoneimage6 from "../assets/projects/capstone/Screenshot 2024-09-30 at 9.21.15 PM.png";
 
 const navBartitles = [

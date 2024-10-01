@@ -3,6 +3,9 @@
 
 .experience {
   @include card();
+  //background-image: url(../../assets/background/kristina-kashtanova-EwpUsHDmEwg-unsplash.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   align-items: center;
