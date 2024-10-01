@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { workExperience, workExperienceTitles } from "../../apiData/data";
 import JobDetails from "../JobDetails/JobDetails";
 import { useNavigate } from "react-router-dom";
+import "./Experience.scss";
 function WorkExperience() {
   const [showDetails, setShowDetails] = useState([] || true);
   const [titles, setTitles] = useState([]);
@@ -21,24 +22,31 @@ function WorkExperience() {
     setShowDetails(selectedDetails);
     console.log(showDetails);
     setId(selectedDetails.id);
+    setOpen(true);
   };
   function close(params) {
     setShowDetails(false);
   }
   return (
-    <>
+    <section className="experience">
       <h1>Experience</h1>
-      <ul>
+      <ul className="experience__container">
         {titles?.map((subtitles, id) => (
           <li
+            className="experience__container "
             onClick={() => {
               handleSelect(subtitles.id);
             }}
             key={subtitles.id}
           >
-            <h3>{subtitles.title}</h3>
+            <h3 className=" experience__container--subtitles">
+              {subtitles.title}
+            </h3>
             {subtitles.id === showDetails.id ? (
-              <JobDetails job={showDetails} setShowDetails={setShowDetails} />
+              <div className=" experience__paragraph">
+                {" "}
+                <JobDetails job={showDetails} setShowDetails={setShowDetails} />
+              </div>
             ) : (
               ""
             )}
@@ -52,7 +60,7 @@ function WorkExperience() {
       >
         {"Close"}
       </button>
-    </>
+    </section>
   );
 }
 

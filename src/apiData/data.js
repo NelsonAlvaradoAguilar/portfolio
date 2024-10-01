@@ -4,6 +4,13 @@ import diploma from "../assets/ imageDiploma.png";
 import certification from "../assets/certification.png";
 import colombiaCertificate from "../assets/colombian certificate.png";
 import hackatonImg from "../assets/Nelson Alvarado-Aguilar-hack.png";
+import capstoneimage1 from "../assets/projects/capstone/Screenshot 2024-09-09 at 9.43.05 PM (2).png";
+import capstoneimage2 from "../assets/projects/capstone/Screenshot 2024-09-30 at 9.21.03 PM.png";
+import capstoneimage3 from "../assets/projects/capstone/Screenshot 2024-09-30 at 9.21.08 PM.png";
+import capstoneimage4 from "../assets/projects/capstone/Screenshot 2024-09-30 at 9.21.11 PM.png";
+import capstoneimage5 from "../assets/projects/capstone/Screenshot 2024-09-09 at 9.43.05 PM (2).png";
+import capstoneimage6 from "../assets/projects/capstone/Screenshot 2024-09-30 at 9.21.15 PM.png";
+
 const navBartitles = [
   { id: "0", title: "About Me" },
   { id: "1", title: "Experience" },
@@ -133,6 +140,27 @@ const workExperience = [
     ],
   },
 ];
+
+const projects = [
+  {
+    id: "0",
+    capstone: [
+      {
+        projectTitle: "Latin Club",
+
+        description:
+          "As my final project for graduation at BrainStation, I developed Latin Club, a web application tailored to connect the Hispanic community in Northumberland County. The app addresses challenges that arose from the growing number of community members relying on a WhatsApp group for communication, where crucial information was often lost or overlooked. Latin Club serves as a centralized hub where users can share events, important announcements, and cultural experiences. The goal was to enhance collaboration and strengthen community ties, providing a more efficient platform to ensure everyone stays informed and engaged.",
+        images: [
+          capstoneimage1,
+          capstoneimage2,
+          capstoneimage3,
+          capstoneimage4,
+          capstoneimage5,
+        ],
+      },
+    ],
+  },
+];
 export {
   navBartitles,
   aboutMeDada,
@@ -142,4 +170,5 @@ export {
   achievementsData,
   workExperience,
   workExperienceTitles,
+  projects,
 };
