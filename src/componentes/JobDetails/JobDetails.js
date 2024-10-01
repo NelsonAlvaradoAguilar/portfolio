@@ -1,11 +1,17 @@
+import { hasFormSubmit } from "@testing-library/user-event/dist/utils";
 import { useNavigate } from "react-router-dom";
 
 function JobDetails({ job, setShowDetails }) {
-  function close(params) {
+  function handelClose(params) {
     setShowDetails(false);
   }
   return (
-    <div className="job-details">
+    <div
+      onClick={() => {
+        handelClose();
+      }}
+      className="job-details"
+    >
       <p className="job-details__company">
         {job?.company}, {job?.location}
       </p>
@@ -17,15 +23,15 @@ function JobDetails({ job, setShowDetails }) {
           <li key={index}>{responsibility}</li>
         ))}
       </ul>
-      <button
-        onClick={() => {
-          close();
-        }}
-      >
-        {"Close"}
-      </button>
     </div>
   );
 }
 
 export default JobDetails;
+/**     <button
+        onClick={() => {
+          handelClose();
+        }}
+      >
+        {"Close"}
+      </button> */

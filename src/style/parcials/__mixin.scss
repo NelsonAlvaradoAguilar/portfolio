@@ -52,21 +52,25 @@
   border: 1px solid black;
 }
 @mixin Titles {
-  height: 36px;
+  height: 42px;
   border-radius: 5px;
-  border: 1px solid black;
+  //border: 1px solid black;
   background-color: $activeTextBtn;
   padding: 0.1rem 0.4rem 0.1rem 0.4rem;
+  &:hover {
+    @include hover();
+    background-color: $ligthBackground;
+  }
 }
 
 @mixin card {
   background-color: $ligthBackground;
   padding: 1rem 1.5rem 1rem 1.5rem;
-  margin-left: 1rem;
-  margin-right: 1rem;
-  margin-top: 1rem;
+  margin: 1rem;
+
+  border: 1px solid #ddd;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
 }
 @mixin buttonStyle {
   border: 2px solid $buttonBorder;

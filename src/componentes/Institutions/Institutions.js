@@ -1,3 +1,4 @@
+import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./Institutions.scss";
 import closeImg from "../../assets/icons/icons8-close.svg";
