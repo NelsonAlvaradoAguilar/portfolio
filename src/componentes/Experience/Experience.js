@@ -4,7 +4,7 @@ import JobDetails from "../JobDetails/JobDetails";
 import { useNavigate } from "react-router-dom";
 import "./Experience.scss";
 function WorkExperience() {
-  const [showDetails, setShowDetails] = useState([] || true);
+  const [showDetails, setShowDetails] = useState([]);
   const [titles, setTitles] = useState([]);
   const [id, setId] = useState();
   const [open, setOpen] = useState(false);
@@ -26,6 +26,9 @@ function WorkExperience() {
   };
   function close(params) {
     setShowDetails(false);
+    if (!showDetails) {
+      setShowDetails(true);
+    }
   }
   return (
     <section className="experience">
