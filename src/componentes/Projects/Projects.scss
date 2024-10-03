@@ -22,12 +22,14 @@
   }
   &__dropdown {
     width: 36px;
+    border: 2px solid $buttonBorder;
+    border-radius: 50%;
+    padding: 0.1rem;
 
-    border: none;
     &--down {
       transform: rotate(180deg);
       border: 2px solid $buttonBorder;
-      border-radius: 50%;
+      // border-radius: 50%;
       padding: 0.1rem;
     }
   }
