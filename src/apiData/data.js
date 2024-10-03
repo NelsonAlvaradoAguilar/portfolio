@@ -169,6 +169,7 @@ const projects = [
       "REST APIs",
     ],
     images: [capstoneimage2, capstoneimage3, capstoneimage4, capstoneimage5],
+    link: "https://github.com/NelsonAlvaradoAguilar/capstone",
   },
   {
     id: "1",
