@@ -21,17 +21,7 @@
     align-items: center;
   }
   &__dropdown {
-    width: 36px;
-    border: 2px solid $buttonBorder;
-    border-radius: 50%;
-    padding: 0.1rem;
-
-    &--down {
-      transform: rotate(180deg);
-      border: 2px solid $buttonBorder;
-      // border-radius: 50%;
-      padding: 0.1rem;
-    }
+    @include dropDownArrow();
   }
   &__ul {
     @include listDecoration();

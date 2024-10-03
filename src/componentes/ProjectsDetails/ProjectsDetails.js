@@ -1,50 +1,59 @@
-import { useEffect, useState } from "react";
+import React from "react";
+import { Link } from "react-router-dom";
 
-function ProjectsDetails({ details, setOpen, dropDown }) {
+function ProjectsDetails({ details, closeProject, open, dropDown }) {
   console.log(details);
-  const [content, setContent] = useState();
 
-  useEffect(() => {
-    setContent(details);
-    console.log(content);
-  }, []);
-
-  const close = () => {
-    console.log("Closing project details"); // Add this log
-    setOpen(true);
-  };
   return (
     <ul className="project__ul">
       <li className="project__ul--li">
-        <h2 className="project__title" onClick={close}>
-          {content?.projectTitle}
-        </h2>
-        <p className="project__description">{content?.description}</p>
+        <h2 className="project__title">{details?.projectTitle}</h2>
+        <p className="project__description">{details?.description}</p>
       </li>
       <li>
         <div className="project__images">
-          {content?.images?.map((image, imgIndex) => (
+          {details?.images?.map((image, imgIndex) => (
             <img
               key={imgIndex}
               className="project__image"
               src={image}
-              alt={`Project ${content?.projectTitle} Image ${imgIndex}`}
+              alt={`Project ${details?.projectTitle} Image ${imgIndex}`}
             />
           ))}
         </div>
       </li>
-      <li>
-        <div className="project__tech-stack">
-          <h3>Tech Stack:</h3>
-          <ul>
-            {content?.techStack?.map((tech, techIndex) => (
-              <li key={techIndex} className="project__tech-item">
-                {tech}
-              </li>
-            ))}
-          </ul>
-        </div>
-      </li>
+      {details ? (
+        <>
+          <li>
+            <div className="project__tech-stack">
+              <h3>Tech Stack:</h3>
+              <ul>
+                {details?.techStack?.map((tech, techIndex) => (
+                  <li key={techIndex} className="project__tech-item">
+                    {tech}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </li>
+          <Link to={`${details.link}`} target="_blank">
+            {details.link}
+          </Link>
+          <li>
+            {" "}
+            <img
+              onClick={closeProject}
+              className={`project__dropdown ${
+                open ? "project__dropdown--down" : ""
+              }`}
+              src={dropDown}
+              alt="Close projects dropdown"
+            />
+          </li>
+        </>
+      ) : (
+        ""
+      )}
     </ul>
   );
 }

@@ -1,9 +1,9 @@
-function ProjectsUl({ data, open, openProject, dropDown }) {
-  return (
-    <ul className="project__ul">
+function ProjectsUl({ project, open, openProject, dropDown }) {
+  return project?.map((data) => (
+    <ul key={data.id} className="project__ul">
       <li className="project__ul--li">
         <h2 className="project__title">
-          {data?.projectTitle}
+          {data?.projectTitle}{" "}
           {!open ? (
             <img
               onClick={() => {
@@ -32,7 +32,7 @@ function ProjectsUl({ data, open, openProject, dropDown }) {
         </div>
       </li>
     </ul>
-  );
+  ));
 }
 
 export default ProjectsUl;
