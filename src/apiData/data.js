@@ -10,6 +10,8 @@ import capstoneimage3 from "../assets/projects/capstone/Screenshot 2024-09-30 at
 import capstoneimage4 from "../assets/projects/capstone/Screenshot 2024-09-30 at 9.21.11 PM.png";
 import capstoneimage5 from "../assets/projects/capstone/Screenshot 2024-09-30 at 9.21.15 PM.png";
 import googleFitImage1 from "../assets/projects/googleFit/Wireframe.png";
+import googleFitImage2 from "../assets/projects/googleFit/Screenshot 2024-10-03 at 5.47.10 PM.png";
+import googleFitImage3 from "../assets/projects/googleFit/Screenshot 2024-10-03 at 5.47.27 PM.png";
 import dropDown from "../assets/icons/down-arrow.png";
 
 const navBartitles = [
@@ -170,14 +172,15 @@ const projects = [
   },
   {
     id: "1",
-    title: "  GoogleFit",
+    title: "GoogleFit",
 
     projectTitle: "Google Fit",
 
     description:
       "This project was part of the BrainStation Hackathon, focused on enhancing user engagement with the Google Fit platform. I designed and developed two highly interactive sections for the dashboard, incorporating seamless animations and modal functionality to elevate user experience. These features allowed users to easily track their fitness goals and monitor health metrics, offering a fluid, intuitive, and visually engaging interface. Using React for the front end and deploying it on Vercel ensured quick and smooth performance, while giving users real-time feedback on their progress. The added interactivity and clean design contributed to the overall innovation of the project, making it stand out during the competition.",
     techStack: ["React", "Vercel", "JavaScript", "CSS Animations", "HTML5"],
-    images: [googleFitImage1],
+    images: [googleFitImage1, googleFitImage2, googleFitImage3],
+    link: "https://google-fit-team2.vercel.app/",
   },
 ];
 export {
