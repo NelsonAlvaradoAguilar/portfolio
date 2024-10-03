@@ -4,7 +4,7 @@ import diploma from "../assets/ imageDiploma.png";
 import certification from "../assets/certification.png";
 import colombiaCertificate from "../assets/colombian certificate.png";
 import hackatonImg from "../assets/Nelson Alvarado-Aguilar-hack.png";
-import capstoneimage1 from "../assets/projects/capstone/Screenshot 2024-09-09 at 9.43.05 PM (2).png";
+
 import capstoneimage2 from "../assets/projects/capstone/Screenshot 2024-09-30 at 9.21.03 PM.png";
 import capstoneimage3 from "../assets/projects/capstone/Screenshot 2024-09-30 at 9.21.08 PM.png";
 import capstoneimage4 from "../assets/projects/capstone/Screenshot 2024-09-30 at 9.21.11 PM.png";
@@ -145,49 +145,39 @@ const workExperience = [
 const projects = [
   {
     id: "0",
-    capstone: [
-      {
-        projectTitle: "Latin Club",
+    title: "capstone",
 
-        description:
-          "As my final project for graduation at BrainStation, I developed Latin Club, a web application tailored to connect the Hispanic community in Northumberland County. The app addresses challenges that arose from the growing number of community members relying on a WhatsApp group for communication, where crucial information was often lost or overlooked. Latin Club serves as a centralized hub where users can share events, important announcements, and cultural experiences. The goal was to enhance collaboration and strengthen community ties, providing a more efficient platform to ensure everyone stays informed and engaged.",
-        techStack: [
-          "React",
-          "Node.js",
-          "Express.js",
-          "PostgreSQL",
-          "Axios",
-          "Knex.js",
-          "OAuth",
-          "Jest",
-          "Vercel",
-          "CSS3",
-          "HTML5",
-          "JavaScript (ES6+)",
-          "REST APIs",
-        ],
-        images: [
-          capstoneimage1,
-          capstoneimage2,
-          capstoneimage3,
-          capstoneimage4,
-          capstoneimage5,
-        ],
-      },
+    projectTitle: "Capstone Latin Club",
+
+    description:
+      "As my final project for graduation at BrainStation, I developed Latin Club, a web application tailored to connect the Hispanic community in Northumberland County. The app addresses challenges that arose from the growing number of community members relying on a WhatsApp group for communication, where crucial information was often lost or overlooked. Latin Club serves as a centralized hub where users can share events, important announcements, and cultural experiences. The goal was to enhance collaboration and strengthen community ties, providing a more efficient platform to ensure everyone stays informed and engaged.",
+    techStack: [
+      "React",
+      "Node.js",
+      "Express.js",
+      "PostgreSQL",
+      "Axios",
+      "Knex.js",
+      "OAuth",
+      "Jest",
+      "Vercel",
+      "CSS3",
+      "HTML5",
+      "JavaScript (ES6+)",
+      "REST APIs",
     ],
+    images: [capstoneimage2, capstoneimage3, capstoneimage4, capstoneimage5],
   },
   {
     id: "1",
-    googleFit: [
-      {
-        projectTitle: "Google Fit",
+    title: "  GoogleFit",
 
-        description:
-          "This project was part of the BrainStation Hackathon, focused on enhancing user engagement with the Google Fit platform. I designed and developed two highly interactive sections for the dashboard, incorporating seamless animations and modal functionality to elevate user experience. These features allowed users to easily track their fitness goals and monitor health metrics, offering a fluid, intuitive, and visually engaging interface. Using React for the front end and deploying it on Vercel ensured quick and smooth performance, while giving users real-time feedback on their progress. The added interactivity and clean design contributed to the overall innovation of the project, making it stand out during the competition.",
-        techStack: ["React", "Vercel", "JavaScript", "CSS Animations", "HTML5"],
-        images: [googleFitImage1],
-      },
-    ],
+    projectTitle: "Google Fit",
+
+    description:
+      "This project was part of the BrainStation Hackathon, focused on enhancing user engagement with the Google Fit platform. I designed and developed two highly interactive sections for the dashboard, incorporating seamless animations and modal functionality to elevate user experience. These features allowed users to easily track their fitness goals and monitor health metrics, offering a fluid, intuitive, and visually engaging interface. Using React for the front end and deploying it on Vercel ensured quick and smooth performance, while giving users real-time feedback on their progress. The added interactivity and clean design contributed to the overall innovation of the project, making it stand out during the competition.",
+    techStack: ["React", "Vercel", "JavaScript", "CSS Animations", "HTML5"],
+    images: [googleFitImage1],
   },
 ];
 export {
