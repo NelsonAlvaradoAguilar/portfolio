@@ -9,18 +9,18 @@ function Header(params) {
     console.log();
   };
   return (
-    <header className="header">
-      <div className="header">
+    <header className="header header__header">
+      <div>
         <h1 className="header__engineer"> {"Nelson Alvarado"}</h1>
         <h3 className="header__engineer--career"> {"Jr. Software Engineer"}</h3>
       </div>
-      <nav className="header">
+      <nav>
         <ul className="header header__navegation">
           <li
             onClick={() => {
               select("about");
             }}
-            className={`header header__list`}
+            className={` header__list`}
           >
             {" "}
             <a
