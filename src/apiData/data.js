@@ -174,7 +174,6 @@ const projects = [
   {
     id: "1",
     title: "GoogleFit",
-
     projectTitle: "Google Fit",
 
     description:

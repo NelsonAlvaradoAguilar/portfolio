@@ -23,15 +23,15 @@ function Header(params) {
             className={`header header__list`}
           >
             {" "}
-            <Link
-              to=""
+            <a
+              href="#about"
               //  target="_blank"
               className={`header header__link ${
                 selected === "about" ? "header__link--active" : ""
               }`}
             >
               {"About Me"}
-            </Link>
+            </a>
           </li>
           <li
             onClick={() => {
@@ -40,15 +40,15 @@ function Header(params) {
             className={`header header__list `}
           >
             {" "}
-            <Link
-              to=""
+            <a
+              href="#experience"
               //  target="_blank"
               className={`header header__link ${
                 selected === "experience" ? "header__link--active" : ""
               }`}
             >
               {"Experience"}
-            </Link>
+            </a>
           </li>
           <li
             onClick={() => {
@@ -57,15 +57,15 @@ function Header(params) {
             className={`header header__list `}
           >
             {" "}
-            <Link
-              to=""
+            <a
+              href="#projects"
               //  target="_blank"
               className={`header header__link ${
                 selected === "projects" ? "header__link--active" : ""
               }`}
             >
               {"My Projects"}
-            </Link>
+            </a>
           </li>
           <li
             onClick={() => {
@@ -74,15 +74,15 @@ function Header(params) {
             className={`header header__list `}
           >
             {" "}
-            <Link
-              to=""
+            <a
+              href="#galery"
               // target="_blank"
               className={`header header__link ${
                 selected === "gallery" ? "header__link--active" : ""
               }`}
             >
               {"Galelery"}
-            </Link>
+            </a>
           </li>
         </ul>
       </nav>

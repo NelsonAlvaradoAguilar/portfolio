@@ -29,7 +29,7 @@ const Project = () => {
     }
   }
   return (
-    <section className="project">
+    <section className="project" id="projects">
       <h1 className="project__title">Projects </h1>
 
       {!open ? (

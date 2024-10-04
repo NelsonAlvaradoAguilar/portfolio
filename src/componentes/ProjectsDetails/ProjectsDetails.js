@@ -36,8 +36,12 @@ function ProjectsDetails({ details, closeProject, open, dropDown }) {
               </ul>
             </div>
           </li>
-          <Link to={`${details.link}`} target="_blank">
-            {details.link}
+          <Link
+            className="project__site-link"
+            to={`${details.link}`}
+            target="_blank"
+          >
+            {"Web site"}
           </Link>
           <li>
             {" "}
