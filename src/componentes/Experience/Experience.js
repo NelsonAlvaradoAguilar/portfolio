@@ -31,7 +31,7 @@ function WorkExperience() {
     }
   }
   return (
-    <section className="experience">
+    <section className="experience" id="experience">
       <h1>Experience</h1>
       <ul className="experience__container">
         {titles?.map((subtitles, id) => (
