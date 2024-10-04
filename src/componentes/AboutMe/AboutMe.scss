@@ -5,6 +5,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
   @include card();
   &__subcontainer {
     display: flex;
@@ -20,8 +21,13 @@
     border-radius: 25px;
   }
   &__article {
+    // Fill the vertical height of the screen
+    padding: 20px;
+    width: 18rem;
   }
   &__paragraph {
+    text-align: justify;
+    width: 100%;
     &--botton {
       margin-bottom: 0%;
     }

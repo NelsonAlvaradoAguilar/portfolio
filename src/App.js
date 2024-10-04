@@ -1,6 +1,6 @@
 import logo from "./logo.svg";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import "./App.css";
+import "./App.scss";
 import AboutMe from "./componentes/AboutMe/AboutMe.js";
 import Education from "./componentes/Education/Education.js";
 import WorkExperience from "./componentes/Experience/Experience.js";
