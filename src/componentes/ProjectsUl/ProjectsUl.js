@@ -1,6 +1,6 @@
 function ProjectsUl({ project, open, openProject, dropDown }) {
   return project?.map((data) => (
-    <ul key={data.id} className="project__ul">
+    <ul key={data.id} className="project__ul" id="projects">
       <li className="project__ul--li">
         <h2 className="project__title">
           {data?.projectTitle}{" "}

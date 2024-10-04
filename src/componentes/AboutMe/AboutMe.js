@@ -4,7 +4,7 @@ import { Link, NavLink } from "react-router-dom";
 import "./AboutMe.scss";
 function AboutMe(params) {
   return (
-    <section className="bio">
+    <section className="bio" id="about">
       {aboutMeDada?.map((data) => {
         return (
           <div className="bio__container" key={data.id}>
