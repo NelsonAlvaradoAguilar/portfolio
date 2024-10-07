@@ -1,0 +1,23 @@
+@use "../../style/parcials/_mixin" as *;
+@use "../../style/parcials/_variables" as *;
+
+
+
+.footer{
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    margin-bottom: 1rem;
+    align-items: center;
+   // justify-content: center;
+   &__icons-container{
+    flex-flow: row wrap;
+    justify-content: space-around;
+   }
+   &__logo{
+    width: 100%;
+    %--img{
+        height: 8.5rem;
+    }
+   }
+}

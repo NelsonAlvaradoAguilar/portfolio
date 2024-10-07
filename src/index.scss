@@ -2,9 +2,10 @@
 @use "../src/style/parcials/_variables" as *;
 body {
   margin-left: 0.5rem;
+  
   margin-right: 0.5rem;
-  background-color: $backgroundColor;
-  @include bodyFont();
+
+  @include bodyStyle();
 }
 
 code {

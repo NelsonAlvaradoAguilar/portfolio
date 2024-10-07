@@ -14,8 +14,9 @@ function Education() {
   const navegate = useNavigate();
 
   useEffect(() => {
-    setTitles(educationDataList);
+    
     setData(educationData);
+    setTitles(educationDataList);
   }, []);
 
   const handleSelect = (selectedId) => {
@@ -53,7 +54,7 @@ function Education() {
               details?.id === title.id ? " education__subtitle--active" : ""
             }`}
           >
-            <h4>{title.title}</h4>
+            <h3>{title.title}</h3>
           </li>
         ))}
       </ul>
