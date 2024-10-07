@@ -99,7 +99,7 @@ const workExperienceTitles = [
   },
   {
     id: "1",
-    title: "Production Assistant/Set-up Team Member Trainee",
+    title: "Production Assistant",
   },
   {
     id: "2",
