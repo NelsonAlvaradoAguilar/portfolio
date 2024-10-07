@@ -33,7 +33,7 @@ const Project = () => {
       <h1 className="project__title">Projects </h1>
 
       {!open ? (
-        <ProjectsUl
+        <ProjectsUl 
           project={projectList}
           open={open}
           openProject={openProject}

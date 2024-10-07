@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "./Header.scss";
 import { Link, NavLink } from "react-router-dom";
+import logo from "../../assets/logos/Vista Logos/logo-svg.svg";
+import logo2 from "../../assets/logos/Vista Logos (1)/logo-transparent-svg.svg";
 import { navBartitles } from "../../apiData/data";
 function Header(params) {
   const [selected, SetSelected] = useState("");
@@ -10,10 +12,9 @@ function Header(params) {
   };
   return (
     <header className="header header__header">
-      <div>
-        <h1 className="header__engineer"> {"Nelson Alvarado"}</h1>
-        <h3 className="header__engineer--career"> {"Jr. Software Engineer"}</h3>
-      </div>
+      <Link className="header__logo" to={"/"}>
+        <img className="header__logo--img" src={logo2}></img>
+      </Link>
       <nav>
         <ul className="header header__navegation">
           <li

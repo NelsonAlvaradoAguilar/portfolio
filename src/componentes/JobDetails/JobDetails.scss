@@ -1,0 +1,33 @@
+@use "../../style/parcials/_mixin" as *;
+@use "../../style/parcials/_variables" as *;
+
+
+
+.job-details{
+    background-color: antiquewhite;
+   width: 18rem;
+
+    border-radius: 5px;
+  display: flex;
+  flex-flow: column ;
+  justify-content: space-around;
+  margin: 1rem;
+  padding: 1rem;
+ &__text{
+    color: black;
+    text-align: justify;
+ }  
+ &__closeBtn{
+    @include closeBtn();
+ }
+ &__responsibilities{
+
+    @include listDecoration();
+   // padding-left: 1.5rem;
+   // padding-right: 1.5rem;
+
+ }
+}
+
+
+

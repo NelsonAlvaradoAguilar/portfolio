@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
 import { workExperience, workExperienceTitles } from "../../apiData/data";
+import closeImg from "../../assets/icons/icons8-close.svg";
 import JobDetails from "../JobDetails/JobDetails";
 import { useNavigate } from "react-router-dom";
 import "./Experience.scss";
+import Close from "../CloseButton/CloseButton";
 function WorkExperience() {
-  const [showDetails, setShowDetails] = useState([]);
+  const [showDetails, setShowDetails] = useState([] || null);
   const [titles, setTitles] = useState([]);
   const [id, setId] = useState();
   const [open, setOpen] = useState(false);
@@ -18,16 +20,15 @@ function WorkExperience() {
     const selectedDetails = workExperience.find(
       (position) => position.id === selectedId
     );
-    console.log(selectedDetails);
+
     setShowDetails(selectedDetails);
     console.log(showDetails);
-    setId(selectedDetails.id);
     setOpen(true);
   };
   function close(params) {
-    setShowDetails(false);
-    if (!showDetails) {
-      setShowDetails(true);
+    if (!open || showDetails ) {
+      setOpen(false);
+   
     }
   }
   return (
@@ -45,26 +46,21 @@ function WorkExperience() {
             <h3 className=" experience__container--subtitles">
               {subtitles.title}
             </h3>
-            {subtitles.id === showDetails.id ? (
-              <div className=" experience__paragraph">
-                {" "}
-                <JobDetails job={showDetails} setShowDetails={setShowDetails} />
-              </div>
-            ) : (
-              ""
-            )}
+            
           </li>
+
         ))}
+        
       </ul>
-      <button
-        onClick={() => {
-          close();
-        }}
-      >
-        {"Close"}
-      </button>
+      {open ? (
+        <div className="experience__description">
+          {" "}
+    <JobDetails job={showDetails} closeJobDescription={close} /></div>
+      
+      ):""}
     </section>
   );
 }
 
 export default WorkExperience;
+//<img   src={closeImg}></img>

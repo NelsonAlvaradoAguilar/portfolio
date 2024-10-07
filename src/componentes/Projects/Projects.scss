@@ -8,13 +8,13 @@
   flex-direction: column;
   //background-image: url(../../assets/background/christian-stahl-xmGkzY--Fgg-unsplash.jpg);
   align-items: center;
-  justify-content: center;
+
 
   @include card();
 
   &__title {
     font-weight: bold;
-    width: 100%;
+    inline-size: 100%;
     gap: 1rem;
     display: flex;
     justify-content: center;
@@ -49,21 +49,23 @@
   }
 
   &__image {
-    width: calc(0.8 * 100vw); /* Adjust size as necessary */
-    height: 100%;
-    margin-top: 1rem;
+    inline-size: calc(0.8 * 100vw); /* Adjust size as necessary */
+    block-size: 100%;
+    margin-block-start: 1rem;
     border-radius: 5px;
     border: 1px solid $border;
     padding: 0.4rem;
+
     &:hover {
       opacity: 0.7;
     }
+    &--image{}
   }
   &__site-link {
     font-size: 1.5rem;
     // position: relative;
-    //top: 2rem;
-    // left: 1.5rem;
+    //inset-block-start: 2rem;
+    // inset-inline-start: 1.5rem;
     @include listDecoration();
   }
 }
