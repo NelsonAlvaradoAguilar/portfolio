@@ -57,15 +57,15 @@
   block-size: 48px;
   border-radius: 5px;
   border-block-end: 1px solid black;
- // background-color: $activeTextBtn;
+
  cursor: grab;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-inline-start: 0.5rem;
-  padding-block-start: 0.5rem;
-  //  align-items: left;
+  margin-block-start: 1rem;
+  margin-block-end: 0.5rem;
+  margin: 0%;
   &:hover {
     @include hover();
     background-color: $ligthBackground;
@@ -78,8 +78,9 @@
   border: 1px solid $border;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-  //background-color:$backgroundCards;
   background-color: #ffffffcf;
+  display: flex;
+  flex-direction: column;
 }
 @mixin buttonStyle {
   border: 2px solid $buttonBorder;

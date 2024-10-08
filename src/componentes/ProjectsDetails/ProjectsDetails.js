@@ -41,7 +41,7 @@ function ProjectsDetails({ details, closeProject, open, dropDown }) {
             to={`${details.link}`}
             target="_blank"
           >
-            {"Web site"}
+            {"Website"}
           </Link>
           <li>
             {" "}
