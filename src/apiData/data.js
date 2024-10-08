@@ -3,6 +3,7 @@ import image2 from "../assets/Screenshot 2024-06-14 at 11.20.42 AM.png";
 import diploma from "../assets/ imageDiploma.png";
 import certification from "../assets/certification.png";
 import colombiaCertificate from "../assets/colombian certificate.png";
+import card from "../assets/card.svg"
 import hackatonImg from "../assets/Nelson Alvarado-Aguilar-hack.png";
 
 import capstoneimage2 from "../assets/projects/capstone/Screenshot 2024-09-30 at 9.21.03 PM.png";
@@ -194,4 +195,5 @@ export {
   workExperienceTitles,
   projects,
   dropDown,
+  card
 };
