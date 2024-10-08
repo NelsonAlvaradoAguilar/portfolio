@@ -1,0 +1,16 @@
+@use "../../style/parcials/_mixin" as *;
+@use "../../style/parcials/_variables" as *;
+
+
+
+.hero{
+background-image: url(../../assets/card.svg);
+background-repeat: no-repeat;
+background-size: contain;
+background-position: center;
+
+height: 16rem;
+width: 100%;
+}
+
+

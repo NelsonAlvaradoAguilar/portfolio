@@ -3,36 +3,26 @@ import './ProjectsUl.scss'
 function ProjectsUl({ project, open, openProject, dropDown }) {
   return project?.map((data) => (
     <ul key={data.id} className="project-Ul" id="projects">
-      <li className=" project-Ul__list" >
-        <h2 className="project-Ul__title">
+      <li onClick={() => {
+              openProject(data?.id);
+              console.log(data?.id);
+            }} className=" project-Ul__list" >
+        <h2  className="project-Ul__title">
           {data?.projectTitle}{" "}
-          {!open ? (
-            <img
-              onClick={() => {
-                openProject(data?.id);
-                console.log(data?.id);
-              }}
-              className={`project-Ul__dropdown ${
-                open ? "project__dropdown--down" : ""
-              }`}
-              src={dropDown}
-            ></img>
-          ) : (
-            ""
-          )}
+         
         </h2>
-      </li>
-      <li  className="project-Ul__images">
-     
-          {data?.images && (
-            <img
-              className=" project-Ul__images--image"
+        {data?.images && (
+            <img  onClick={() => {
+              openProject(data?.id);
+              console.log(data?.id);
+            }}
+              className="project-Ul__images project-Ul__images--image"
               src={data?.images[0]}
               alt={`Project ${data.projectTitle} Image 2`}
             />
           )}
-    
       </li>
+
     </ul>
   ));
 }
@@ -74,5 +64,15 @@ export default ProjectsUl;
     </ul>
   ));
 }
-
+ {!open ? (
+            <img
+             
+              className={`project-Ul__dropdown ${
+                open ? "project__dropdown--down" : ""
+              }`}
+              src={dropDown}
+            ></img>
+          ) : (
+            ""
+          )}
 export default ProjectsUl; */
