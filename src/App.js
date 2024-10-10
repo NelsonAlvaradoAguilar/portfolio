@@ -11,7 +11,7 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <Header />
+        <Header   />
         <Routes>
           {/* Route for Main page */}
 
