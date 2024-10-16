@@ -8,7 +8,7 @@ function AboutMe(params) {
       {aboutMeDada?.map((data) => {
         return (
           <div className="bio__container" key={data.id}>
-            <div className="bio__subcontainer">
+            <div className="bio__container bio__subcontainer">
               <img className="bio__image" src={data.image}></img>
               <h1>{data.name}</h1>
             </div>

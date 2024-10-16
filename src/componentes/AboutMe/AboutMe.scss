@@ -7,10 +7,20 @@
   align-items: center;
 
   @include card();
-  &__subcontainer {
+  &__container {
     display: flex;
     flex-direction: column;
     align-items: center;
+    @include tablet {
+      gap: 6rem;
+      flex-direction: row;
+    }
+  }
+  &__subcontainer {
+    @include tablet {
+      flex-direction: column;
+      gap: 0%;
+    }
   }
   &__image {
     background-color: $basicBackgronudWhite;

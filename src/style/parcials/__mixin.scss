@@ -1,5 +1,22 @@
 @use "./_variables" as *;
+@mixin mobile {
+  @media screen and (min-width: $below-mobile-breakpoint)  {
+      @content; 
+  }
+}
 
+@mixin tablet {
+  @media screen   and (min-width: $tablet-breakpoint)  {
+      @content;
+     
+  }
+}
+@mixin desktop {
+  @media screen and (min-width: $desktop-breakpoint ) {
+      @content;
+  }
+
+}
 @font-face {
   font-family: "Roboto_Condensed";
   font-weight: 400;
