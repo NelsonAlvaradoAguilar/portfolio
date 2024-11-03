@@ -5,17 +5,47 @@
   display: flex;
   flex-direction: column;
   text-align: center;
-
-  &__header {
-    @include border();
-  }
- // @include bodyFont();
   @include listDecoration();
+  @include tablet {
+    flex-direction: row;
+    justify-content: space-between;
+  
+  }
+&__navegation {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  @include listDecoration();
+  @include tablet {
+
+  
+  }
+}
+&__navbar{
+  border-bottom: 0.5px dotted black;
+  @include tablet {
+    width: calc(0.43*100vw);
+
+   // width: 100%;
+ border: none;
+ 
+    align-self: center;
+  
+  }
+}
+  &__header {
+   // 
+  }
+
+
   &__link {
   
     color: $colorText;
     font-size: 0.8rem;
-
+    @include tablet {
+      font-size: 1rem;
+    
+    }
     &:hover {
       @include hover();
     }
@@ -25,11 +55,19 @@
   }
   &__list {
     width: 100%;
-    display: flex;
+   // display: flex;
     justify-content: center;
     align-items: center;
+    @include tablet {
+
+  
+    }
   }
   &__logo{
+    @include tablet {
+      width: calc(0.40*100vw);
+    
+    }
     width: 100%;
     &--img{
       height: 8.5rem;
@@ -38,8 +76,5 @@
    
   
   }
-  &__navegation {
-    width: 100%;
-    flex-direction: row;
-  }
+ 
 }

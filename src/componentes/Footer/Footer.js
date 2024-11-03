@@ -14,22 +14,20 @@ function Footer(params) {
   }
   return (
     <section className="footer">
-      <Link className="footer__logo" to={"/"}>
-        <img className="footer__logo--img" src={logo2}></img>
-      </Link>
-      <div className="footer  footer__icons-container">
-        <Link to={"/FormContact"}>
+     
+      <div className="footer__icons-container">
+        <Link  to={"/FormContact"} className="footer__icons">
           {" "}
           <img src={gmailIcon}></img>
         </Link>
-        <Link to={"https://github.com/NelsonAlvaradoAguilar"} target="_blank">
+        <Link className="footer__icons"  to={"https://github.com/NelsonAlvaradoAguilar"} target="_blank">
           {" "}
           <img src={githubIcon}></img>
         </Link>
-        <a href="tel:+19052077425">
+        <a className="footer__icons" href="tel:+19052077425">
           <img  src={phoneIcon} alt="Phone Icon" />
         </a>
-        <Link
+        <Link className="footer__icons"
           to={"https://www.linkedin.com/in/nelsonalvaradoa/"}
           target="_blank"
         >
@@ -37,6 +35,9 @@ function Footer(params) {
           <img src={linkedinIcon}></img>
         </Link>
       </div>
+      <Link className="footer__logo" to={"/"}>
+        <img className="footer__logo--img" src={logo2}></img>
+      </Link>
     </section>
   );
 }
