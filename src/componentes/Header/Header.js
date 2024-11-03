@@ -11,17 +11,17 @@ function Header(params) {
     console.log();
   };
   return (
-    <header className="header header__header">
+    <header className="header">
       <Link className="header__logo" to={"/"}>
         <img className="header__logo--img" src={logo2}></img>
       </Link>
-      <nav>
-        <ul className="header header__navegation">
+      <nav className="header__navbar">
+        <ul className="header__navegation">
           <li
             onClick={() => {
               select("about");
             }}
-            className={` header__list`}
+            className={`header__list`}
           >
             {" "}
             <a

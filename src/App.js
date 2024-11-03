@@ -1,6 +1,4 @@
-
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-
 
 import Header from "./componentes/Header/Header.js";
 
@@ -11,14 +9,14 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <Header   />
+        <Header />
         <Routes>
           {/* Route for Main page */}
 
           <Route path="/" element={<Main />} />
           <Route path="/FormContact" element={<ContactForm />} />
         </Routes>
-<Footer/>
+        <Footer />
       </BrowserRouter>
     </>
   );

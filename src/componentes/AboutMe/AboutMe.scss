@@ -7,10 +7,29 @@
   align-items: center;
 
   @include card();
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include tablet {
+      gap: 2rem;
+      flex-direction: row;
+    }
+  }
   &__subcontainer {
     display: flex;
     flex-direction: column;
     align-items: center;
+    @include tablet {
+      
+    }
+  }
+  &__name{
+   
+    @include tablet {
+      font-size: 2rem;
+      width: 100%;
+         }
   }
   &__image {
     background-color: $basicBackgronudWhite;
@@ -28,6 +47,9 @@
   &__paragraph {
     text-align: justify;
     width: 100%;
+    @include tablet {
+     font-size: 1.2rem;
+        }
     &--botton {
       margin-bottom: 0%;
     }

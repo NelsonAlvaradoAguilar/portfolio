@@ -10,7 +10,7 @@ function AboutMe(params) {
           <div className="bio__container" key={data.id}>
             <div className="bio__subcontainer">
               <img className="bio__image" src={data.image}></img>
-              <h1>{data.name}</h1>
+              <h1 className="bio__name">{data.name}</h1>
             </div>
             <article className="bio__article">
               <p className="bio__paragraph">{data.paragraph1}</p>
