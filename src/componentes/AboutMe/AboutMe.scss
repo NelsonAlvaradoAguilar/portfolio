@@ -12,15 +12,24 @@
     flex-direction: column;
     align-items: center;
     @include tablet {
-      gap: 6rem;
+      gap: 2rem;
       flex-direction: row;
     }
   }
   &__subcontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     @include tablet {
-      flex-direction: column;
-      gap: 0%;
+      
     }
+  }
+  &__name{
+   
+    @include tablet {
+      font-size: 2rem;
+      width: 100%;
+         }
   }
   &__image {
     background-color: $basicBackgronudWhite;
@@ -38,6 +47,9 @@
   &__paragraph {
     text-align: justify;
     width: 100%;
+    @include tablet {
+     font-size: 1.2rem;
+        }
     &--botton {
       margin-bottom: 0%;
     }
